@@ -1,0 +1,12 @@
+<h1> Calendar </h1>
+<%= button_to "Event", meetings_new_path%>
+<%= month_calendar(model: @meeting) do |date, meetings| %>
+  <%= date.day %>
+
+  <% meetings.each do |meeting| %>
+    <div>
+      <%= meeting.name %>
+    </div>
+    <% end %>
+<% end %>
+
