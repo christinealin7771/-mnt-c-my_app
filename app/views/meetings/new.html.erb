@@ -1,8 +1,8 @@
-<h1> Calendar </h1>
+<h1> Add Event </h1>
 
-<%= form_with model: @meeting, url: meeting_path do |form| %>
+<%= form_with model: @meeting do |form| %>
 
-  <%= form.hidden_field :user_id, id: :meeting_user_id, value: current_user.id %>
+  <%= form.hidden_field :user_id %>
 
   <div class="mb-3">
     <%= form.label :event, "Event" %>
@@ -24,3 +24,8 @@
   </div>
 
 <% end %>
+
+
+
+
+

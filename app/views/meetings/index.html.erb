@@ -1,0 +1,14 @@
+<h1> Calendar </h1>
+
+<%= link_to "Add Event", new_meeting_path, class: "btn btn-primary" %>
+
+<%= month_calendar events: @meetings do |date, meetings| %>
+  <%= date.day %>
+
+  <% meetings.each do |meeting| %>
+    <div>
+      <%= link_to meeting.event, edit_meeting_path(meeting) %>
+    </div>
+  <% end %>
+<% end %>
+

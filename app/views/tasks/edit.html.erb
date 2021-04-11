@@ -1,0 +1,31 @@
+<h2> Edit Task </h2>
+
+<%= form_with model: @task do |form| %>
+
+  <%= form.hidden_field :user_id %>
+
+  <div class="mb-3">
+    <%= form.label :task, "Task" %>
+    <%= form.text_field :task %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :week_day, "Date" %>
+    <%= form.date_field :week_day %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :remaining_time, "Time End" %>
+    <%= form.time_select :remaining_time %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit "Edit Task"%>
+  </div>
+
+  <div class="mb-3">
+    <%= link_to "Delete Task", task_path, method: :delete %>
+  </div>
+
+
+<% end %>
