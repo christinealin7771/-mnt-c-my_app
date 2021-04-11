@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  setTime: 2021-03-16 18:56:24
+  remainingTime: 2021-03-16 18:56:24
+
+two:
+  setTime: 2021-03-16 18:56:24
+  remainingTime: 2021-03-16 18:56:24
