@@ -1,6 +1,12 @@
-<h1 id="display">Click Start</h1>
+<div class="center">
+  <h1 id="display">Click Start</h1>
+</div>
 <p id="timer", hidden><%=@task.remaining_time %></p>
-<button id="my-button", onclick="toggleTimer()">Start</button>
-<button onclick="reset()">Reset</button>
+
+<div id="outer">
+  <button id="my-button", onclick="toggleTimer()", class="btn btn-secondary">Start</button>
+  <button onclick="reset()", class="btn btn-danger">Reset</button>
+</div>
+
 
 <%= javascript_include_tag 'timer.js' %>

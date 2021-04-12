@@ -28,7 +28,6 @@ function toggleTimer()
                 clearInterval(myTimer);
                 reset();
                 toggleTimer();
-                alert("Timer finished");
             }
             localStorage.setItem("remainingTime", remainingTime);
         }, 1000);

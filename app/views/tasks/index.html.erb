@@ -1,11 +1,14 @@
-<h1> Weekly Planner </h1>
-
-<%= link_to "Add Task", new_task_path, class: "btn btn-primary btn-sm" %>
-
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
-    <h5>Monday: <%= Date.today.monday %></h5>
+<h1> Weekly Planner
+  <div class="float-right">
+    <a href="#">
+      <%= link_to "Add Task", new_task_path, class: "btn btn-primary" %>
+    </a>
   </div>
+</h1>
+<br>
+
+<ul class='list-group-item list-group-item-primary'>
+  <h5>Monday: <%= Date.today.monday %></h5>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday %>
       <%= form_with model: planner, local: false do |form| %>
@@ -38,10 +41,8 @@
 
 
 <br>
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
+<ul class='list-group-item list-group-item-primary'>
     <h5>Tuesday: <%= Date.today.monday+1 %></h5>
-  </div>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday+1 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -75,10 +76,8 @@
 
 
 <br>
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
+<ul class='list-group-item list-group-item-primary'>
     <h5>Wednesday: <%= Date.today.monday+2 %></h5>
-  </div>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday+2 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -111,10 +110,8 @@
 
 
 <br>
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
+<ul class='list-group-item list-group-item-primary'>
     <h5>Thursday: <%= Date.today.monday+3 %></h5>
-  </div>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday+3 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -147,10 +144,8 @@
 
 
 <br>
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
+<ul class='list-group-item list-group-item-primary'>
     <h5>Friday: <%= Date.today.monday+4 %></h5>
-  </div>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday+4 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -183,10 +178,8 @@
 
 
 <br>
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
+<ul class='list-group-item list-group-item-primary'>
     <h5>Saturday: <%= Date.today.monday+5 %></h5>
-  </div>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday+5 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -219,10 +212,8 @@
 
 
 <br>
-<ul class='list-group'>
-  <div class="card-header d-flex justify-content-between">
+<ul class='list-group-item list-group-item-primary'>
     <h5>Sunday: <%= Date.today.monday+6 %></h5>
-  </div>
   <% @week_events.each do|planner|%>
     <%if planner.start_time.to_date == Date.today.monday+6 %>
       <%= form_with model: planner, local: false do |form| %>
