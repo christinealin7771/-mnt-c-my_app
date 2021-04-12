@@ -15,8 +15,8 @@
   </div>
 
   <div class="mb-3">
-    <%= form.label :remaining_time, "Time End" %>
-    <%= form.time_select :remaining_time %>
+    <%= form.label :remaining_time, "Set Timer" %>
+    <%= form.time_select :remaining_time, default: {hour: 0, min: 0} %>
   </div>
 
   <div class="mb-3">

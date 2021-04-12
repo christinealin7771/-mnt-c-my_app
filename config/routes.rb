@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   devise_for :users
   #get 'home/index' #<- this is the route for localhost:3000/home/index
   resources :users
@@ -11,6 +12,4 @@ Rails.application.routes.draw do
   end
 
   root to: "home#index"
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  end
+end

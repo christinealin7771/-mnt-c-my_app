@@ -6,6 +6,19 @@
   <div class="card-header d-flex justify-content-between">
     <h5>Monday: <%= Date.today.monday %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday %>
       <%= form_with model: planner, local: false do |form| %>
@@ -23,11 +36,25 @@
   <% end %>
 </ul>
 
+
 <br>
 <ul class='list-group'>
   <div class="card-header d-flex justify-content-between">
     <h5>Tuesday: <%= Date.today.monday+1 %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday+1 %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday+1 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -52,6 +79,19 @@
   <div class="card-header d-flex justify-content-between">
     <h5>Wednesday: <%= Date.today.monday+2 %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday+2 %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday+2 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -69,11 +109,25 @@
   <% end %>
 </ul>
 
+
 <br>
 <ul class='list-group'>
   <div class="card-header d-flex justify-content-between">
     <h5>Thursday: <%= Date.today.monday+3 %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday+3 %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday+3 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -91,11 +145,25 @@
   <% end %>
 </ul>
 
+
 <br>
 <ul class='list-group'>
   <div class="card-header d-flex justify-content-between">
     <h5>Friday: <%= Date.today.monday+4 %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday+4 %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday+4 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -113,11 +181,25 @@
   <% end %>
 </ul>
 
+
 <br>
 <ul class='list-group'>
   <div class="card-header d-flex justify-content-between">
     <h5>Saturday: <%= Date.today.monday+5 %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday+5 %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday+5 %>
       <%= form_with model: planner, local: false do |form| %>
@@ -135,11 +217,25 @@
   <% end %>
 </ul>
 
+
 <br>
 <ul class='list-group'>
   <div class="card-header d-flex justify-content-between">
     <h5>Sunday: <%= Date.today.monday+6 %></h5>
   </div>
+  <% @week_events.each do|planner|%>
+    <%if planner.start_time.to_date == Date.today.monday+6 %>
+      <%= form_with model: planner, local: false do |form| %>
+        <li class='list-group-item'>
+          <%= form.check_box :done %>
+          <span style="<%= planner.done? ? 'text-decoration: line-through' : '' %>"><%= planner.event %></span>
+
+          <%= form.submit 'Done' %>
+
+          <%= link_to 'Edit', edit_meeting_path(planner) %>
+      <% end %>
+    <% end %>
+  <% end %>
   <% @tasks.each do |planner| %>
     <% if planner.week_day == Date.today.monday+6 %>
       <%= form_with model: planner, local: false do |form| %>

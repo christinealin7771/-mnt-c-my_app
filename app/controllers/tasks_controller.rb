@@ -7,6 +7,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = current_user.tasks.all
+    @week_events = current_user.meetings.where(start_time: Date.today.monday..Date.today.monday+7.days).order(start_time: :asc)
   end
 
   def countdown_timer
